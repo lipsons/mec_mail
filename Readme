@@ -1,0 +1,34 @@
+Summary:
+    This program sends out an email based on configuration file, with optional attachment.
+
+Usage:
+*Passing in more than one argument will cause the program to exit.
+    - Running without passing an account/argument:
+        user@box:$ python mec_email.py
+    - Running passing one account/argument:
+        user@box:$ python mec_email.py [account]
+
+Config file:
+    Configuration in the json format below.
+    Set the user, pwd, from, to, subject, body, and filename [optional].
+
+    Set the account name, in the below example it is acct1.
+    Then set...
+    user: It is usually the same as the from email.
+    pwd: Password for the account.
+    from: Email address of the account.
+    to:  The intended recipient.
+    subject: Subject of the email.
+    body:  Message in the body of the email.
+    filename:  Attachment to be sent w/ email.
+
+    "acct1": {
+          "user": "[account-name]"
+          , "pwd": "password"
+          , "from": "youremail@gmail.com"
+          , "to": "none@thistime.net"
+          , "subject": "This is the subject"
+          , "body": "This is the body of the email"
+          , "filename": "myFile.txt"
+          }
+        }
